@@ -1,0 +1,12 @@
+Installing the libraries for fastAPI and SQL:
+[For linux]
+sudo apt install python3.10-venv
+sudo apu install mariadb-server
+----
+pip install fastapi uvicorn sqlalchemy pymysql python-multipart databases databases[aiomysql]
+
+uvicorn main:app --reload --host 0.0.0.0 --port 7106
+
+Migration:
+alembic revision --autogenerate -m "Add new column"
+alembic upgrade head

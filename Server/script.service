@@ -1,0 +1,16 @@
+[Unit]
+Description=Server Runner
+Requires=multi-user.target sound.target network-online.target keyboard-setup.service graphical.target
+After=multi-user.target sound.target network-online.target keyboard-setup.service graphical.target
+
+[Service]
+ExecStart=/bin/bash -c 'cd "/home/krishpyddev/Desktop/UHD" && export DISPLAY=:0.0 && /usr/bin/python robot.py'
+ExecStartPre=/bin/sleep 60
+StandardError=file:/home/krishpyddev/script_error.log
+User=krishpyddev
+Group=krishpyddev
+StartLimitIntervalSec=0
+StartLimitBurst=0
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,27 @@
+Show up on WSL:
+usbipd list
+usbipd bind --busid <busid>
+usbipd attach --wsl --busid <busid>
+
+Find ports:
+ls /dev/tty*
+Open minicom:
+minicom -o -D /dev/ttyACM0
+
+Connect Shell:
+mpremote connect port:/dev/ttyACM0
+Run Python file:
+mpremote run [filepath]
+
+Open file in micropy console:
+exec(open('/remote/[file].py').read())
+
+Delete and copy controller file:
+mpremote fs rm controller.py
+mpremote fs cp controller.py :controller.py
+
+UTEXAS iot wifi key:
+
+Pico Test:
+Mac address- d8:3a:dd:2d:97:f3
+PSK- 17981954548150055250
