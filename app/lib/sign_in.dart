@@ -1,7 +1,6 @@
 import 'client.dart';
 import 'locate.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'main.dart';
 
 class SignIn extends StatefulWidget {

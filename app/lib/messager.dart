@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'client.dart';
-import 'main.dart';
 
 class MessageView extends StatefulWidget {
   const MessageView(

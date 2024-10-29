@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:app/machine_view.dart';
 import 'package:flutter/material.dart';
 import 'client.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'main.dart';
 
 class Locate extends StatefulWidget {
