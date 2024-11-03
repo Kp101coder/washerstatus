@@ -171,7 +171,7 @@ class _MachineViewState extends State<MachineView> {
                   ),
             ),
             Text(
-              "Est. Time Left: ${machine.timeLeft() != "" ? "${machine.timeLeft()} minutes" : "0 minutes"}",
+              machine.timeLeft(),
               style: Theme.of(context).textTheme.labelLarge,
             ),
             Text(
@@ -219,8 +219,14 @@ class Machine {
 
   String timeLeft() {
     if (timeRunning == null) {
-      return "";
+      return "0 minutes";
     }
-    return (approxTime - timeRunning!).toString();
+    int minLeft = (approxTime - timeRunning!);
+    if (minLeft < 0) {
+      minLeft *= -1;
+      return "Overtime: $minLeft minutes";
+    } else {
+      return "Est. Time Left: $minLeft minutes";
+    }
   }
 }
