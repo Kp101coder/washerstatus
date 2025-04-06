@@ -659,7 +659,7 @@ def serverFunctions():
             return data
         except Exception as e:
             return str(e)
-
+'''
 serverFunctions()
 
 updateFunctions()
@@ -679,3 +679,4 @@ machineFunctions()
 userFunctions()
 
 postFunctions()
+'''

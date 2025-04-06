@@ -50,7 +50,7 @@ class Client:
 
     def __find_ID(self) -> int:
         """Gets the machine id from the saved file on the controller\n
-        If it doe not exist, it will create the next id and a new machine row on the server"""
+        If it does not exist, it will create the next id and a new machine row on the server"""
         machineID = None
         if self.file_exists("machineID.txt"):
             with open("machineID.txt", "r") as f:
